@@ -13,9 +13,6 @@
 module load nvidia
 # Update PATH
 export PATH=/home/mattinglyw/mambaforge/envs/relernn/bin:$PATH
-# Set XLA flags
-export XLA_FLAGS=--xla_gpu_cuda_data_dir=/home/mattinglyw/mambaforge/envs/relernn/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/share/apps/bioinformatics/dna-algorithm/mamba/envs/dna-algorithm/lib/python3.7/site-packages/nvidia/cudnn/lib/
 # ----------------Your Commands------------------- #
 #
 echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
