@@ -1,9 +1,8 @@
 # /bin/sh
 # ----------------Parameters---------------------- #
 #$ -S /bin/sh
-#$ -pe mthread 4
-#$ -l gpu,gpu_arch=L40S
-#$ -cwd
+#$ -pe mthread 16
+#$ -l gpu,ngpu=1,gpu_arch=L40S
 #$ -j y
 #$ -N relernn-test
 #$ -o relernn-test.log
