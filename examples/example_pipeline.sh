@@ -29,6 +29,7 @@ ${TRAIN} \
     --nEpochs 2 \
     --nValSteps 2 \
     --seed ${SEED}
+    --nCPU 30
 
 # Predict
 ${PREDICT} \
