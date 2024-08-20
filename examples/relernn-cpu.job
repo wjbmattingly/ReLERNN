@@ -3,7 +3,6 @@
 #$ -S /bin/sh
 #$ -pe mthread 4
 #$ -q sThM.q
-#$ -l mres=1000G,h_data=1000G,h_vmem=1000G,himem
 #$ -cwd
 #$ -j y
 #$ -N relernn-test
