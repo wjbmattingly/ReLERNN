@@ -1,7 +1,7 @@
 # /bin/sh
 # ----------------Parameters---------------------- #
 #$ -S /bin/sh
-#$ -pe mthread 32s
+#$ -pe mthread 32
 #$ -l gpu,ngpu=1,gpu_arch=L40S
 #$ -j y
 #$ -N relernn-test
