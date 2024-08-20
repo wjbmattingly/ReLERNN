@@ -1,8 +1,10 @@
 # /bin/sh
 # ----------------Parameters---------------------- #
 #$ -S /bin/sh
-#$ -pe mthread 4
-#$ -q sThM.q
+#$ -pe mthread 20
+#$ -q uThM.q -l lopri
+#$ -l mres=200G,h_data=10G,h_vmem=10G,himem
+#$ -cwd
 #$ -cwd
 #$ -j y
 #$ -N relernn-test
