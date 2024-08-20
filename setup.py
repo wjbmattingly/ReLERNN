@@ -16,7 +16,7 @@ setup(name='ReLERNN',
       license='MIT',
       packages=find_packages(exclude=[]),
       install_requires=[
-          "tensorflow=2.2.0",
+          "tensorflow==2.2.0",
           "msprime>=0.7.4",
           "scikit-learn>=0.22.1",
           "matplotlib>=3.1.3",
