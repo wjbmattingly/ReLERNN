@@ -104,7 +104,7 @@ def main():
     vali_sequence = SequenceBatchGenerator(**bds_vali_params)
     test_sequence = SequenceBatchGenerator(**bds_test_params)
 
-
+    print("Training starting...")
     ## Train network
     runModels(ModelFuncPointer=GRU_TUNED84,
             ModelName="GRU_TUNED84",
@@ -118,7 +118,6 @@ def main():
             validationSteps=args.nValSteps,
             nCPU=nProc,
             gpuID=args.gpuID)
-
 
     ## Plot results of predictions on test set
     plotResults(resultsFile=test_resultFile,saveas=test_resultFig)

@@ -356,7 +356,7 @@ def runModels(ModelFuncPointer,
                 save_best_only=True),
             TerminateOnNaN()
             ]
-
+    print("Determining CPU count")
     if nCPU > 1:
         history = model.fit(TrainGenerator,
             steps_per_epoch=epochSteps,
@@ -373,7 +373,7 @@ def runModels(ModelFuncPointer,
             validation_data=ValidationGenerator,
             callbacks=callbacks_list,
             use_multiprocessing=False)
-
+    print("Creating the network")
     # Write the network
     if(network != None):
         ##serialize model to JSON
@@ -393,6 +393,8 @@ def runModels(ModelFuncPointer,
         sys.exit(1)
 
     x,y = TestGenerator.__getitem__(0)
+
+    print("Predictions...")
     predictions = model.predict(x)
 
     history.history['loss'] = np.array(history.history['loss'])
