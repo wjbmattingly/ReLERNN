@@ -1,0 +1,29 @@
+# /bin/sh
+# ----------------Parameters---------------------- #
+#$ -S /bin/sh
+#$ -pe mthread 4
+#$ -l gpu,gpu_arch=L40S
+#$ -cwd
+#$ -j y
+#$ -N relernn-test
+#$ -o relernn-test.log
+#$ -m bea
+#$ -M mattinglyw@si.edu
+#
+# ----------------Modules------------------------- #
+#
+module load nvidia
+# Update PATH
+export PATH=/home/mattinglyw/mambaforge/envs/relernn/bin:$PATH
+# Set XLA flags
+export XLA_FLAGS=--xla_gpu_cuda_data_dir=/home/mattinglyw/mambaforge/envs/relernn/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/share/apps/bioinformatics/dna-algorithm/mamba/envs/dna-algorithm/lib/python3.7/site-packages/nvidia/cudnn/lib/
+#
+# ----------------Your Commands------------------- #
+#
+echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
+echo + NSLOTS = $NSLOTS
+#
+examples/example_pipeline.sh
+#
+echo = `date` job $JOB_NAME done

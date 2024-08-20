@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(name='ReLERNN',
       version='0.2',
-      requires_python="<3.11",
+      requires_python="==3.7.12",
       description='ReLERNN: Recombination Landscape Estimation using Recurrent Neural Networks',
       long_description=long_description,
       long_description_content_type="text/markdown",
