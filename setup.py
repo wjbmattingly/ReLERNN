@@ -34,4 +34,3 @@ setup(name='ReLERNN',
       zip_safe=False,
       setup_requires=[],
 )
-

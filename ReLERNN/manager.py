@@ -27,7 +27,6 @@ class Manager(object):
         poolDir = None,
         projectDir = None,
         networkDir = None,
-        seed = None
         ):
 
         self.vcf = vcf
