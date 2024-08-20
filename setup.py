@@ -20,7 +20,9 @@ setup(name='ReLERNN',
           "msprime>=0.7.4",
           "scikit-learn>=0.22.1",
           "matplotlib>=3.1.3",
-          "scikit-allel>=1.2.1"],
+          "scikit-allel>=1.2.1",
+          "protobuf<3.20"
+          ],
       scripts=[
             "ReLERNN/ReLERNN_SIMULATE",
             "ReLERNN/ReLERNN_SIMULATE_POOL",
